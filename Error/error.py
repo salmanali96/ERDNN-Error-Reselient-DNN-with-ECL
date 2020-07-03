@@ -410,38 +410,38 @@ class ErrorCorrection():
         return x
 
     def errorcorrection1(self, x, number):
-        xoriginal = self.Convolution(x.clone(), number)
-        return xoriginal
+         xoriginal = self.Convolution(x.clone(), number)
+          #return xoriginal
 
-        # x1 = xoriginal.clone()
-        # x1 = self.BitError(x1)
-        # return x1
+         x1 = xoriginal.clone()
+         x1 = self.BitError(x1)
+         return x1
 
-        # x2 = xoriginal.clone()
-        # x2 = self.BitError(x2)
+         x2 = xoriginal.clone()
+         x2 = self.BitError(x2)
 
-        # x3 = xoriginal.clone()
-        # x3 = self.BitError(x3)
+         x3 = xoriginal.clone()
+         x3 = self.BitError(x3)
 
-        # x = self.errorcorrection(x1, x2, x3)
-        # return x
+         x = self.errorcorrection(x1, x2, x3)
+         return x
 
     def ResErrorCorrection(self, x, number):
         xoriginal = self.ResConvl(x.clone(), number)
-        return xoriginal
+        #return xoriginal
 
-        # x1 = xoriginal.clone()
-        # x1 = self.BitError(x1)
-        # return x1
+        x1 = xoriginal.clone()
+        x1 = self.BitError(x1)
+       # return x1
 
-        # x2 = xoriginal.clone()
-        # x2 = self.BitError(x2)
+        x2 = xoriginal.clone()
+        x2 = self.BitError(x2)
 
-        # x3 = xoriginal.clone()
-        # x3 = self.BitError(x3)
+        x3 = xoriginal.clone()
+        x3 = self.BitError(x3)
 
-        # x = self.errorcorrection(x1, x2, x3)
-        # return x
+        x = self.errorcorrection(x1, x2, x3)
+        return x
 
     def ResConvl(self, x, number):
         fn = getattr(self, 'rcon' + str(number), None)
