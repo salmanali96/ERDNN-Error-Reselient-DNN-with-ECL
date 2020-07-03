@@ -8,12 +8,13 @@
 - tqdm (for progress bar)
 - numpy
 
-## NOW
+## Project Guidelines
+- Checkpoint folder contains the google drive link for all the pre-trained models.
+- After downloading the trained model file, copy it into its respective folder
+- You can create custom look-up-table from the LUT.py file. Errors are injected into the model using these Look-up-Tables
 
-- training alexnet with ReLU, PwReLU2, PwReLU5 on imagenet at mlvc07 server.
-- coding resnet for imagenet
 
-## Pretrained model setting
+## Pretrained model setting for ImageNet
 
 - vgg16
     - training batch size: 128
@@ -35,6 +36,25 @@ or
 ```shell
 $ python3 ./Error_Files/LUT.py -e 0.01
 ```
+
+## Test for MNIST
+
+By running the train_MNIST.py file, you can test the performance on MNIST dataset
+
+python train_MNIST.py -net lenet -act PRELU3 -resume yes -error 0.1
+
+
+## Test for CIFAR10 
+
+By running the train_CIFAR10.py file, you can test the performance on CIFAR10 dataset
+
+python3 train_CIFAR10.py -act PRELU5 -error 0.02 -net VGG
+
+## Test for CIFAR100
+
+By running the test.py file, you can test the performance on CIFAR100 dataset
+
+python3 train_CIFAR10.py -act PRELU5 -error 0.02 -net VGG
 
 ## Test for ImageNet
 
