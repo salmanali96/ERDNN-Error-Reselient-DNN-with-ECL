@@ -40,21 +40,23 @@ $ python3 ./Error_Files/LUT.py -e 0.01
 ## Test for MNIST
 
 By running the train_MNIST.py file, you can test the performance on MNIST dataset
-
-python train_MNIST.py -net lenet -act PRELU3 -resume yes -error 0.1
-
+```shell
+$ python train_MNIST.py -net lenet -act PRELU3 -resume yes -error 0.1
+```
 
 ## Test for CIFAR10 
 
 By running the train_CIFAR10.py file, you can test the performance on CIFAR10 dataset
-
-python3 train_CIFAR10.py -act PRELU5 -error 0.02 -net VGG
-
+```shell
+$ python3 train_CIFAR10.py -act PRELU5 -error 0.02 -net VGG
+```
 ## Test for CIFAR100
 
 By running the test.py file, you can test the performance on CIFAR100 dataset
 
-python3 train_CIFAR10.py -act PRELU5 -error 0.02 -net VGG
+```shell
+$ python3 train_CIFAR10.py -act PRELU5 -error 0.02 -net VGG
+```
 
 ## Test for ImageNet
 
